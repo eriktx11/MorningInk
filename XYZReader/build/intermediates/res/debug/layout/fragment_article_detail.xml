@@ -5,46 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <FrameLayout
+        android:id="@+id/photo_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-
-        <android.support.design.widget.AppBarLayout
-            android:id="@+id/photo_container"
+        <ImageView
+            android:id="@+id/photo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="8dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
-
-            <android.support.design.widget.CollapsingToolbarLayout
-                android:id="@+id/collapsing_toolbar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:contentScrim="?attr/colorPrimary">
-
-            <!--<View-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="112dp"-->
-                <!--android:background="@drawable/photo_background_protection" />-->
-
-                <ImageView
-                    android:id="@+id/photo"
-                    android:layout_width="match_parent"
-                    android:layout_height="363dp"
-                    android:scaleType="centerCrop"/>
-                    <!--app:layout_collapseMode="parallax"/>-->
-
-
-                <android.support.v7.widget.Toolbar
-                    android:id="@+id/mToolbar"
-                    android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-                    app:layout_collapseMode="pin"/>
-
-            </android.support.design.widget.CollapsingToolbarLayout>
-
-        </android.support.design.widget.AppBarLayout>
-
+            android:layout_height="365dp"
+            android:foreground="@drawable/photo_background_protection"
+            android:scaleType="centerCrop"/>
+        <!--<View-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="112dp"-->
+            <!--android:background="@drawable/photo_background_protection" />-->
+    </FrameLayout>
 
 
     <com.example.xyzreader.ui.ObservableScrollView
@@ -52,7 +28,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
+
+
+        <!--<FrameLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+
+
+
+            <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -114,6 +99,7 @@
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
         </FrameLayout>
+        <!--</FrameLayout>-->
     </com.example.xyzreader.ui.ObservableScrollView>
 
     <ImageButton android:id="@+id/share_fab"

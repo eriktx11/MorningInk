@@ -134,6 +134,8 @@ public class ArticleListActivity extends ActionBarActivity implements
                 public void onClick(View view) {
                     startActivity(new Intent(Intent.ACTION_VIEW,
                             ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                    overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+
                 }
             });
             return vh;

@@ -30,7 +30,7 @@ import android.widget.FrameLayout;
 import com.example.xyzreader.R;
 
 
-public class DrawInsetsFrameLayout extends CoordinatorLayout {
+public class DrawInsetsFrameLayout extends FrameLayout {
         //FrameLayout {
     private Drawable mInsetBackground;
     private Drawable mTopInsetBackground;

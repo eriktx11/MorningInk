@@ -18,7 +18,7 @@
     <dimen name="detail_body_text_size">20sp</dimen>
     <!-- From: file:/Users/erikllerena/Downloads/xyzreader/XYZReader/src/main/res/values-sw600dp/macro_layout.xml -->
     <eat-comment/>
-    <dimen name="detail_card_top_margin">384dp</dimen>
+    <dimen name="detail_card_top_margin">369dp</dimen>
     <dimen name="detail_inner_horiz_margin">64dp</dimen>
     <dimen name="detail_metabar_title_bottom_padding">8dp</dimen>
     <dimen name="detail_metabar_vert_padding">32dp</dimen>
@@ -27,6 +27,7 @@
     <eat-comment/>
     <dimen name="detail_title_text_size">42sp</dimen>
     <dimen name="fab_margin">24dp</dimen>
+    <dimen name="parallax_image_height">365dp</dimen>
     <!-- From: file:/Users/erikllerena/Downloads/xyzreader/XYZReader/build/intermediates/exploded-aar/com.android.support/design/22.2.0/res/values-sw600dp/values-sw600dp.xml -->
     <eat-comment/>
     <dimen name="snackbar_action_inline_max_width">0dp</dimen>

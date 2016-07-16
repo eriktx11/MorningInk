@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.v4.app.ShareCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.support.v7.graphics.Palette;
+import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.text.format.DateUtils;
 import android.text.method.LinkMovementMethod;
@@ -39,11 +40,12 @@ public class ArticleDetailFragment extends Fragment implements
     private static final String TAG = "ArticleDetailFragment";
 
     public static final String ARG_ITEM_ID = "item_id";
-    private static final float PARALLAX_FACTOR = 0.40f;
+    private static final float PARALLAX_FACTOR = 0.55f;
 
     private Cursor mCursor;
     private long mItemId;
     private View mRootView;
+    private View topView;
     private int mMutedColor = 0xFF333333;
     private ObservableScrollView mScrollView;
     //private NestedScrollView mScrollView;
@@ -56,6 +58,9 @@ public class ArticleDetailFragment extends Fragment implements
     private int mScrollY;
     private boolean mIsCard = false;
     private int mStatusBarFullOpacityBottom;
+
+    private int mParallaxImageHeight;
+    private View mToolbarView;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -84,6 +89,7 @@ public class ArticleDetailFragment extends Fragment implements
         //mStatusBarFullOpacityBottom = getResources().getDimensionPixelSize(
             //    R.dimen.detail_card_top_margin);
         setHasOptionsMenu(true);
+
     }
 
     public ArticleDetailActivity getActivityCast() {
@@ -105,6 +111,19 @@ public class ArticleDetailFragment extends Fragment implements
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
 
+
+
+
+        //topView= inflater.inflate(R.layout.activity_article_detail, container, false);
+        //topView.findViewById(R.id.filmimgid);
+        //topView.findViewById(R.id.mToolbar);
+        mParallaxImageHeight = getResources().getDimensionPixelSize(
+                R.dimen.parallax_image_height);
+
+
+
+
+
         mRootView = inflater.inflate(R.layout.fragment_article_detail, container, false);
         mDrawInsetsFrameLayout = (DrawInsetsFrameLayout)
                 mRootView.findViewById(R.id.draw_insets_frame_layout);
@@ -119,6 +138,14 @@ public class ArticleDetailFragment extends Fragment implements
         mScrollView.setCallbacks(new ObservableScrollView.Callbacks() {
             @Override
             public void onScrollChanged() {
+
+
+
+                int baseColor = getResources().getColor(R.color.blkorg);
+                float alpha = Math.min(1, (float) mScrollY / mParallaxImageHeight);
+                //topView.setBackgroundColor(getUpButtonFloor());
+
+
                 mScrollY = mScrollView.getScrollY();
                 getActivityCast().onUpButtonFloorChanged(mItemId, ArticleDetailFragment.this);
                 mPhotoContainerView.setTranslationY((int) (mScrollY - mScrollY / PARALLAX_FACTOR));

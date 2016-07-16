@@ -18,6 +18,7 @@ package com.example.xyzreader.ui;
 
 import android.content.Context;
 import android.os.Parcelable;
+import android.support.v7.app.AppCompatActivity;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.widget.ScrollView;
