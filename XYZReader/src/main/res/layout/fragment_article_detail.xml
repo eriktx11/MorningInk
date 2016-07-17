@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/photo"
             android:layout_width="match_parent"
-            android:layout_height="355dp"
+            android:layout_height="@dimen/img_frag_hight"
             android:foreground="@drawable/photo_background_protection"
             android:scaleType="centerCrop"/>
         <!--<View-->
@@ -47,7 +47,7 @@
                 android:layout_height="wrap_content"
                 android:maxWidth="@dimen/detail_card_max_width"
                 android:background="@color/white"
-                android:elevation="2dp"
+                android:elevation="@dimen/elev_maxwidth_layout"
                 android:layout_marginTop="@dimen/detail_card_top_margin"
                 android:layout_gravity="center_horizontal">
 
@@ -102,16 +102,17 @@
         <!--</FrameLayout>-->
     </com.example.xyzreader.ui.ObservableScrollView>
 
-    <ImageButton android:id="@+id/share_fab"
+    <android.support.design.widget.FloatingActionButton
+                 android:id="@+id/share_fab"
                  android:stateListAnimator="@anim/fab_state_list_anim"
-                 android:background="@drawable/element_background"
+                 app:backgroundTint="@color/theme_accent"
+                 app:elevation="@dimen/fab_elevation"
                  android:layout_gravity="bottom|end"
                  android:layout_marginRight="@dimen/fab_margin"
                  android:layout_marginBottom="@dimen/fab_margin"
-                 android:layout_width="56dp"
-                 android:layout_height="56dp"
+                 android:layout_width="@dimen/float_button_dim"
+                 android:layout_height="@dimen/float_button_dim"
                  android:src="@drawable/ic_share"
-                 android:elevation="@dimen/fab_elevation"
                  android:contentDescription="@string/action_share" />
 
 </com.example.xyzreader.ui.DrawInsetsFrameLayout>

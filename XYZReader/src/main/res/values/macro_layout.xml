@@ -17,4 +17,13 @@
     <dimen name="detail_body_top_margin">6dp</dimen>
     <!--16-->
     <dimen name="detail_body_bottom_margin">88dp</dimen>
+    <dimen name="img_frag_hight">355dp</dimen>
+    <dimen name="elev_maxwidth_layout">2dp</dimen>
+    <dimen name="float_button_dim">56dp</dimen>
+    <dimen name="txt_pading_dim">16dp</dimen>
+    <dimen name="txt_pading_dim_bottom">4dp</dimen>
+    <dimen name="bar_main_height">112dp</dimen>
+    <dimen name="rec_pad_top">116dp</dimen>
+    <dimen name="rec_pad_bottom">28dp</dimen>
+
 </resources>

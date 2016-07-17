@@ -45,7 +45,7 @@ public class ArticleDetailActivity extends AppCompatActivity
     private MyPagerAdapter mPagerAdapter;
     private View mUpButtonContainer;
     private View mUpButton;
-    private ImageView fab;
+    private FloatingActionButton fab;
     CollapsingToolbarLayout collapsingToolbarLayout;
 
 
@@ -94,19 +94,19 @@ public class ArticleDetailActivity extends AppCompatActivity
 
         mUpButton = findViewById(R.id.action_up);
 
-        fab = (ImageView)findViewById(R.id.action_up);
-        AlphaAnimation animation1 = new AlphaAnimation(1, 0);
-        animation1.setDuration(0);
-        animation1.setStartOffset(0);
-        animation1.setFillAfter(true);
-        fab.startAnimation(animation1);
-
-        animation1.reset();
-        animation1 = new AlphaAnimation(0, 1);
-        animation1.setDuration(1500);
-        animation1.setStartOffset(500);
-        animation1.setFillAfter(true);
-        fab.startAnimation(animation1);
+//        fab = (FloatingActionButton)findViewById(R.id.action_up);
+//        AlphaAnimation animation1 = new AlphaAnimation(1, 0);
+//        animation1.setDuration(0);
+//        animation1.setStartOffset(0);
+//        animation1.setFillAfter(true);
+//        fab.startAnimation(animation1);
+//
+//        animation1.reset();
+//        animation1 = new AlphaAnimation(0, 1);
+//        animation1.setDuration(1500);
+//        animation1.setStartOffset(500);
+//        animation1.setFillAfter(true);
+//        fab.startAnimation(animation1);
 
         mUpButton.setOnClickListener(new View.OnClickListener() {
             @Override

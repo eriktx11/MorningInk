@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bar_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:clipToPadding="false">
 
 
         <android.support.design.widget.AppBarLayout
@@ -72,14 +73,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 
-    <ImageButton android:id="@+id/action_up"
+    <android.support.design.widget.FloatingActionButton
+                 android:id="@+id/action_up"
                  android:stateListAnimator="@anim/fab_state_list_anim"
-                 android:background="@drawable/element_background"
+                 app:backgroundTint="@color/theme_accent"
+                 app:elevation="@dimen/fab_elevation"
                  android:layout_gravity="bottom|start"
                  android:layout_marginLeft="@dimen/fab_margin"
                  android:layout_marginBottom="@dimen/fab_margin"
-                 android:layout_width="56dp"
-                 android:layout_height="56dp"
+                 android:layout_width="@dimen/float_button_dim"
+                 android:layout_height="@dimen/float_button_dim"
                  android:src="@drawable/home"
                  android:contentDescription="@string/action_share" />
 
