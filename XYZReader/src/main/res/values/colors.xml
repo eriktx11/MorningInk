@@ -25,6 +25,10 @@
     <color name="ltgray">#f35320</color>
     <color name="drkorg">#aa3a16</color>
     <color name="blkorg">#441708</color>
+    <color name="white">#fff</color>
+    <color name="drktxt">#333</color>
+    <color name="lghtxt">#8fff</color>
+    <color name="vietxt">#6000</color>
 
 
 </resources>
