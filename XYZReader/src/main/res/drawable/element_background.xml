@@ -1,0 +1,45 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+    <!--<item>-->
+        <!--<shape android:shape="oval">-->
+            <!--<solid android:color="#BDBDBD"/>-->
+            <!--<corners android:radius="5dp"/>-->
+        <!--</shape>-->
+    <!--</item>-->
+
+    <!--<item-->
+        <!--android:left="0dp"-->
+        <!--android:right="2dp"-->
+        <!--android:top="0dp"-->
+        <!--android:bottom="2dp">-->
+        <!--<shape android:shape="oval">-->
+            <!--<solid android:color="@color/theme_accent"/>-->
+            <!--<corners android:radius="5dp"/>-->
+        <!--</shape>-->
+    <!--</item>-->
+    <!--<item android:drawable="@drawable/white_selectable_item_background_circle" />-->
+<!--</layer-list>-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="false">
+        <layer-list>
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#44000000"/>
+                </shape>
+            </item>
+            <item android:bottom="2dp" android:left="0dp" android:right="2dp" android:top="2dp">
+                <shape android:shape="oval">
+                    <solid android:color="@color/theme_accent" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <shape android:bottom="2dp" android:left="2dp" android:right="2dp" android:shape="oval" android:top="2dp">
+            <solid android:color="#E73700" />
+        </shape>
+    </item>
+
+</selector>

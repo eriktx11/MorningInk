@@ -9,6 +9,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v13.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -20,6 +21,8 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
+import android.view.animation.AlphaAnimation;
+import android.widget.ImageView;
 
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
@@ -42,6 +45,7 @@ public class ArticleDetailActivity extends AppCompatActivity
     private MyPagerAdapter mPagerAdapter;
     private View mUpButtonContainer;
     private View mUpButton;
+    private ImageView fab;
     CollapsingToolbarLayout collapsingToolbarLayout;
 
 
@@ -71,9 +75,9 @@ public class ArticleDetailActivity extends AppCompatActivity
             @Override
             public void onPageScrollStateChanged(int state) {
                 super.onPageScrollStateChanged(state);
-                mUpButton.animate()
-                        .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
-                        .setDuration(300);
+//                mUpButton.animate()
+//                        .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
+//                        .setDuration(300);
             }
 
             @Override
@@ -89,6 +93,20 @@ public class ArticleDetailActivity extends AppCompatActivity
         //mUpButtonContainer = findViewById(R.id.up_container);
 
         mUpButton = findViewById(R.id.action_up);
+
+        fab = (ImageView)findViewById(R.id.action_up);
+        AlphaAnimation animation1 = new AlphaAnimation(1, 0);
+        animation1.setDuration(0);
+        animation1.setStartOffset(0);
+        animation1.setFillAfter(true);
+        fab.startAnimation(animation1);
+
+        animation1.reset();
+        animation1 = new AlphaAnimation(0, 1);
+        animation1.setDuration(1500);
+        animation1.setStartOffset(500);
+        animation1.setFillAfter(true);
+        fab.startAnimation(animation1);
 
         mUpButton.setOnClickListener(new View.OnClickListener() {
             @Override

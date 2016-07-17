@@ -20,12 +20,12 @@
                 app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
 
-                <ImageView
-                        android:id="@+id/filmimgid"
-                        android:layout_width="match_parent"
-                        android:layout_height="365dp"
-                        android:background="@android:color/transparent"
-                        app:layout_collapseMode="parallax"/>
+                <!--<ImageView-->
+                        <!--android:id="@+id/filmimgid"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="365dp"-->
+                        <!--android:background="@android:color/transparent"-->
+                        <!--app:layout_collapseMode="parallax"/>-->
                 <android.support.v7.widget.Toolbar
                     android:id="@+id/mToolbar"
                     android:layout_width="match_parent"
@@ -74,14 +74,13 @@
 
     <ImageButton android:id="@+id/action_up"
                  android:stateListAnimator="@anim/fab_state_list_anim"
-                 android:background="@drawable/add_fab_background"
+                 android:background="@drawable/element_background"
                  android:layout_gravity="bottom|start"
                  android:layout_marginLeft="@dimen/fab_margin"
                  android:layout_marginBottom="@dimen/fab_margin"
                  android:layout_width="56dp"
                  android:layout_height="56dp"
                  android:src="@drawable/home"
-                 android:elevation="@dimen/fab_elevation"
                  android:contentDescription="@string/action_share" />
 
 

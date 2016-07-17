@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/photo"
             android:layout_width="match_parent"
-            android:layout_height="365dp"
+            android:layout_height="355dp"
             android:foreground="@drawable/photo_background_protection"
             android:scaleType="centerCrop"/>
         <!--<View-->
@@ -104,7 +104,7 @@
 
     <ImageButton android:id="@+id/share_fab"
                  android:stateListAnimator="@anim/fab_state_list_anim"
-                 android:background="@drawable/add_fab_background"
+                 android:background="@drawable/element_background"
                  android:layout_gravity="bottom|end"
                  android:layout_marginRight="@dimen/fab_margin"
                  android:layout_marginBottom="@dimen/fab_margin"
