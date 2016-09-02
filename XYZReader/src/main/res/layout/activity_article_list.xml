@@ -1,4 +1,3 @@
-<!--<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -24,14 +23,12 @@
             android:paddingBottom="@dimen/rec_pad_bottom" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
-    <!--<FrameLayout-->
     <android.support.design.widget.AppBarLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/bar_main_height"
         android:background="@color/drkorg"
         android:elevation="@dimen/fab_elevation">
-
 
 
         <android.support.v7.widget.Toolbar
@@ -41,7 +38,7 @@
             android:layout_marginRight="@dimen/list_toolbar_side_margin"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center_vertical"><!--android:layout_height="?actionBarSize"-->
+            android:layout_gravity="center_vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -51,7 +48,5 @@
 
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
-    <!--</FrameLayout>-->
 
-<!--</FrameLayout>-->
     </android.support.design.widget.CoordinatorLayout>

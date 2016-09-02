@@ -16,10 +16,7 @@
             android:layout_height="@dimen/img_frag_hight"
             android:foreground="@drawable/photo_background_protection"
             android:scaleType="centerCrop"/>
-        <!--<View-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="112dp"-->
-            <!--android:background="@drawable/photo_background_protection" />-->
+
     </FrameLayout>
 
 
@@ -27,14 +24,6 @@
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-
-
-        <!--<FrameLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-
-
 
 
             <FrameLayout
@@ -99,7 +88,6 @@
 
             </com.example.xyzreader.ui.MaxWidthLinearLayout>
         </FrameLayout>
-        <!--</FrameLayout>-->
     </com.example.xyzreader.ui.ObservableScrollView>
 
     <android.support.design.widget.FloatingActionButton
